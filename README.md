@@ -1,42 +1,90 @@
-# Author & Book Management System
-A simple C# Console Application that manages book and author information using LINQ Method Syntax.
-This code how to filter, join, sort, and project data from multiple collections using LINQ. It connects books with their authors through AuthorId and displays the book title, author name, and published year in an organized format.
+# Book & Author Management System
 
-# Features
-- Store multiple book records
-- Store multiple author records
-- Join Books and Authors using AuthorId
-- Filter books based on publication year
-- Display only the published year
-- Sort books by published year
-- Sort books alphabetically by title
-- Select only required information for output
-- Use console text colors for better presentation
-- Display book and author information in the console
+A simple C# Console Application that manages books and authors using LINQ Method Syntax. The program joins books with their authors, filters books by publication year, sorts the results, and displays selected book information.
 
-Code Structure
-│
-├── Books
-│   ├── BookId
-│   ├── Title
-│   ├── AuthorId
-│   ├── Genre
-│   ├── PublishedYear
-│   └── Books()
-│
-├── Author
-│   ├── AuthorId
-│   ├── Name
-│   ├── Country
-│   └── Author()
-│
-└── AuthorBook
-    └── Main()
-        │
-        └── LINQ Method Syntax
-            ├── Where()
-            ├── Join()
-            ├── OrderBy()
-            ├── ThenBy()
-            ├── Select()
-            └── ToList()  
+## Features
+
+* Store multiple book records
+* Store multiple author records
+* Join books and authors using `AuthorId`
+* Filter books published after the year 700
+* Display book title, author name, and publication year
+* Sort books by publication year
+* Sort books alphabetically by title when years are the same
+* Select only required information using `Select`
+* Use console colors for presentation
+
+## Code Structure
+
+Books
+ ├── BookId
+ ├── Title
+ ├── AuthorId
+ ├── Genre
+ ├── PublishedYear
+ └── Books()
+
+Author
+ ├── AuthorId
+ ├── Name
+ ├── Country
+ └── Author()
+
+AuthorBook
+ └── Main()
+      ├── Create Books List
+      ├── Create Authors List
+      └── LINQ Method Syntax
+           ├── Where
+           ├── Join
+           ├── OrderBy
+           ├── ThenBy
+           ├── Select
+           └── ToList
+
+
+## LINQ Concepts Used
+
+* Where — Filters books published after year 700.
+* Join — Connects books and authors using `AuthorId`.
+* OrderBy — Sorts books by publication year.
+* ThenBy — Sorts books alphabetically by title.
+* Select — Projects only the required book information.
+* ToList — Converts the query result into a list.
+
+## Query Flow
+
+Books
+  ↓
+Where(PublishedYear > 700)
+  ↓
+Join with Authors
+  ↓
+OrderBy(PublishedYear)
+  ↓
+ThenBy(BookTitle)
+  ↓
+Select(BookTitle, AuthorName, PublishedYear)
+  ↓
+ToList()
+  ↓
+Display Results
+
+## Output
+--Book Information--
+
+Book Title: Sahih al-Bukhari
+Writer   : Imam Al-Bukhari
+Published : 846
+
+Book Title: The Canon of Medicine
+Writer   : Ibn Sina (Avicenna)
+Published : 1025
+
+Book Title: The Book of Healing
+Writer   : Imam Al-Ghazali
+Published : 1027
+
+## Technologies
+
+**C# • .NET Console Application • LINQ Method Syntax • Classes • Objects • List<T> • Join • Where • OrderBy • ThenBy • Select • DateTime • Console I/O**
