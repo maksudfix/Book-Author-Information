@@ -1,4 +1,4 @@
-# Book & Author Management System
+# Book & Author Information System
 
 A simple C# Console Application that manages books and authors using LINQ Method Syntax. The program joins books with their authors, filters books by publication year, sorts the results, and displays selected book information.
 
