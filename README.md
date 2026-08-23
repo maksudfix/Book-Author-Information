@@ -14,34 +14,6 @@ A simple C# Console Application that manages books and authors using LINQ Method
 * Select only required information using `Select`
 * Use console colors for presentation
 
-## Code Structure
-
-Books
- ├── BookId
- ├── Title
- ├── AuthorId
- ├── Genre
- ├── PublishedYear
- └── Books()
-
-Author
- ├── AuthorId
- ├── Name
- ├── Country
- └── Author()
-
-AuthorBook
- └── Main()
-      ├── Create Books List
-      ├── Create Authors List
-      └── LINQ Method Syntax
-           ├── Where
-           ├── Join
-           ├── OrderBy
-           ├── ThenBy
-           ├── Select
-           └── ToList
-
 
 ## LINQ Concepts Used
 
@@ -69,21 +41,6 @@ Select(BookTitle, AuthorName, PublishedYear)
 ToList()
   ↓
 Display Results
-
-## Output
---Book Information--
-
-Book Title: Sahih al-Bukhari
-Writer   : Imam Al-Bukhari
-Published : 846
-
-Book Title: The Canon of Medicine
-Writer   : Ibn Sina (Avicenna)
-Published : 1025
-
-Book Title: The Book of Healing
-Writer   : Imam Al-Ghazali
-Published : 1027
 
 ## Technologies
 
